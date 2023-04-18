@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel ./src/index.tsx -o ./dist/index.js "
+    "start": "webpack serve --config ./config/webpack.config  --mode=development",
+    "build": "webpack build --config ./config/webpack.config  --mode=production",
+    "babel": "babel ./src/index.tsx -o ./dist/index.js "
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,8 @@
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.4.2",
     "webpack": "^5.76.2",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
     "@babel/cli": "^7.21.0",
